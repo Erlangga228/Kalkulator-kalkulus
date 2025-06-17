@@ -12,7 +12,8 @@ import sympy as sp
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D  # untuk 3D plot
-
+st.title("Kalkulator Fungsi Kompleks")
+st.write("Masukkan fungsi dan hitung turunan kompleksnya.")
 
 # Definisikan simbol
 x, y = sp.symbols('x y', real=True)
