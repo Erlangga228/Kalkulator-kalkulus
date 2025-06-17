@@ -17,6 +17,31 @@ import matplotlib.pyplot as plt
 st.title("Kalkulator Fungsi Kompleks")
 st.write("Masukkan fungsi dan hitung turunan kompleksnya.")
 
+import streamlit as st
+import sympy as sp
+
+# Judul
+st.title("Kalkulator Fungsi Kompleks")
+st.write("Masukkan fungsi dan hitung turunan kompleksnya.")
+
+# Input fungsi dari user
+user_input = st.text_input("Masukkan fungsi f(z):", "z**2 + 3*z + 2")
+
+# Definisikan variabel kompleks
+z = sp.Symbol('z')
+
+# Coba parse input dan hitung turunan
+if user_input:
+    try:
+        fungsi = sp.sympify(user_input)
+        turunan = sp.diff(fungsi, z)
+
+        # Tampilkan hasil
+        st.latex(f"f(z) = {sp.latex(fungsi)}")
+        st.latex(f"f'(z) = {sp.latex(turunan)}")
+    except Exception as e:
+        st.error(f"Terjadi kesalahan dalam parsing fungsi: {e}")
+
 # Definisikan simbol
 x, y = sp.symbols('x y', real=True)
 z = sp.Symbol('z')  # simbol kompleks
