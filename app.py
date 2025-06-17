@@ -7,11 +7,13 @@ Original file is located at
     https://colab.research.google.com/drive/1ACloFP5jA8PddVbL8yji4gIitK_Tv05I
 """
 
-import sympy as sp
+# Awal file app.py
+
+import streamlit as st
 import sympy as sp
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D  # untuk 3D plot
+
 st.title("Kalkulator Fungsi Kompleks")
 st.write("Masukkan fungsi dan hitung turunan kompleksnya.")
 
